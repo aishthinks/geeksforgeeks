@@ -1,0 +1,12 @@
+class GfG
+{
+   
+    public static int getNth(Node node, int ind)
+    {
+        Node curr = node;
+        for(int i=1;i<ind;i++){
+            curr=curr.next;
+        } 
+        return curr.data;
+    }
+}
