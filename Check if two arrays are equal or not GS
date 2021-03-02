@@ -1,0 +1,15 @@
+public static boolean check(long arr[],long brr[],int n)
+{
+    {  
+        Arrays.sort(arr);
+        Arrays.sort(brr);
+        int i =0, j= 0;
+        while(i<n && j<n){
+            if(arr[i]!=brr[i])
+              return false;
+            i++;
+            j++;
+        }
+        return true;
+    }
+}
