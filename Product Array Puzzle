@@ -1,0 +1,38 @@
+class Solution 
+{ 
+	public static long[] productExceptSelf(int arr[], int n) 
+	{ 
+	   long totalproduct =1;
+        long ans[] = new long[n];
+        int zero=0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]!=0)
+            totalproduct*=arr[i];
+            else
+            zero++;
+        }
+        
+        for(int i=0;i<n;i++)
+        {
+            if(zero>1)
+            {
+                ans[i] = 0;
+                continue;
+            }
+            else if(arr[i]==0)
+            {
+             ans[i]=totalproduct;
+             continue;
+            }
+            else if(zero==1)
+            {
+               ans[i]=0;
+            }
+            else
+            ans[i] = totalproduct/arr[i];
+        }
+        return ans;
+       
+	} 
+} 
