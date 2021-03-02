@@ -1,0 +1,11 @@
+class Solution
+{
+    void deleteNode(Node node)
+    {
+        Node current = node.next;
+        node.data=current.data;
+        node.next=current.next;
+        current = null;
+        
+    }
+}
