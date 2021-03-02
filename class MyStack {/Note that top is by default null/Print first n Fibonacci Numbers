@@ -1,5 +1,0 @@
-public static long[] printFibb(int n) 
-{
-    if(n == 1) return 1; 
-    return printFibb(n)+printFibb(n-1);
-}
