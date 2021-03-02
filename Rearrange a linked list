@@ -1,0 +1,26 @@
+class Solution
+{
+
+   // Should rearrange given linked list such that all even
+   // positioned Nodes are before odd positioned.
+   // Returns new head of linked List.
+    Node rearrangeEvenOdd(Node head)
+    {
+          if(head==null) return null;
+          Node odd = head;
+          Node even = head.next;
+          Node even1 = even;
+          while(odd.next!=null && even.next!=null){
+              odd.next = even.next;
+              odd = even.next;
+              if(odd.next!=null){
+                  even.next = odd.next;
+                  even = odd.next;
+              }else{
+                  even.next = null;
+              }
+          }
+          odd.next = even1;
+          return head;
+     }
+}
