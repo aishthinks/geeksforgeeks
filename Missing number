@@ -1,0 +1,15 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	int i, suma = 0, sum, sub;
+       for(i = 0; i<n-1; i++){
+           suma += array[i];
+       }
+       sum = n*(n+1)/2;
+       sub = sum - suma;
+       return sub;
+	}
+}
