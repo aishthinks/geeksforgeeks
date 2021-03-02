@@ -1,0 +1,13 @@
+class Solution {
+    int minDist(int a[], int n, int x, int y) {
+       int i , j;
+       int min = Integer.MAX_VALUE;
+       for(i=0; i<n; i++){
+           for(j=i+1; j<n; j++){
+               if((x==a[i] && y==a[j] || y==a[i] && x==a[j] && min > Math.abs(i - j))) 
+                    min = Math.abs(i - j);
+           }
+       }
+       return min;
+    }
+}
