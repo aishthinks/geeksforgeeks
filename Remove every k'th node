@@ -1,0 +1,23 @@
+class GfG
+{
+    /*You are required to complete this method*/
+    Node delete(Node head, int k)
+    {
+	   Node temp=head;
+int i=1;
+Node temp2=head;
+while(temp!=null)
+{
+if(i%k==0)
+{
+temp2.next=temp.next;
+}
+temp2=temp;
+temp=temp.next;
+i++;
+
+}
+
+return head;
+    }
+}
