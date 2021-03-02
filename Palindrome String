@@ -1,0 +1,14 @@
+class Solution {
+    int isPlaindrome(String S) {
+        int l = 0;
+        int h = S.length()-1;
+        char ch[] = S.toCharArray();
+        while(h > l)
+       {
+          if(ch[l++] != ch[h--])
+            return 0;
+       }
+       return 1;
+        
+    }
+};
