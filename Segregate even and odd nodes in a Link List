@@ -1,0 +1,20 @@
+class Solution{
+    Node divide(int N, Node head){
+         if(head==null) return null;
+          Node odd = head;
+          Node even = head.next;
+          Node even1 = even;
+          while(odd.next!=null && even.next!=null){
+              odd.next = even.next;
+              odd = even.next;
+              if(odd.next!=null){
+                  even.next = odd.next;
+                  even = odd.next;
+              }else{
+                  even.next = null;
+              }
+          }
+          odd.next = even1;
+          return head;
+    }
+}
