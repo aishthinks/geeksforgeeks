@@ -1,0 +1,13 @@
+class BinarySort
+{
+    static void binSort(int arr[], int n)
+    {
+       HashSet<Integer> set = new HashSet<Integer>();
+       for(int i = 0; i<n-1; i++){
+           if(arr[i]==0){
+               set.add(arr[i]);
+           }
+           
+       }
+    }
+}
