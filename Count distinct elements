@@ -1,0 +1,13 @@
+class Solution{
+    static int distinct(int M[][], int N)
+    {
+        int count = 0;
+        for(int i = 0; i<N-1; i++){
+            for(int j = 0; j<N-1; j++){
+                if(M[i][j]==M[i+1][j+1])
+                  count++;  
+                  }
+        }
+        return count;
+    }
+}
